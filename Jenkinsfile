@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Git') {
             steps {
-                git url:'https://github.com/pra5anth/Website-PRT-ORG', branch:'main'
+                git url:'https://github.com/pra5anth/Online-Learning-Platform-Deployment-using-DevOps-Pipeline', branch:'main'
             }
         }
     stage('Docker') {

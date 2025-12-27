@@ -1,9 +1,5 @@
-FROM nginx:latest
-
-# Remove default Nginx website
-RUN rm /var/www/html/index.nginx-debian.html
-
-# Copy your index.html to Nginx web directory
-COPY index.html /var/www/html/index.html
-COPY . .
+FROM ubuntu
+RUN apt update
+RUN apt install nginx -y
+ADD . /var/www/html
 ENTRYPOINT nginx -D FOREGROUND

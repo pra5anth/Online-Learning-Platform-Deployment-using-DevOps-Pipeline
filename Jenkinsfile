@@ -22,7 +22,7 @@ pipeline {
     stage('Deploy') {
            steps {
                 sh 'sudo docker pull pra5anth/online:latest'
-                sh 'sudo docker run -d -p 80:80 pra5anth/online:latest'
+                sh 'sudo docker run -d -p 81:80 pra5anth/online:latest'
            }
         }
     }

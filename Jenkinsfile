@@ -2,7 +2,9 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = credentials("dhubb")
     }
-    agent any
+    agent {
+        label app1
+    }
 
     stages {
         stage('Git') {
